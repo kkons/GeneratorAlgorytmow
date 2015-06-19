@@ -7,33 +7,35 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String wybor;
+        String userChoice;
         String input;
         Console console = System.console();
         GeneratorAlgorytmow gen = new GeneratorAlgorytmow();
         Scanner sc = new Scanner(System.in);
 
         do {
+            gen.displayMenu();
+            userChoice = sc.nextLine();
 
-            gen.prezentujMenu();
-            wybor = sc.nextLine();
-            switch (wybor) {
+            if (userChoice.equals("1")) {
 
-                case ("1"): {
-                    System.exit(0);
-                }
-                case ("2"): {
-                    System.out.println("Podaj wyraz do odwrócenia");
-                    input = sc.nextLine();
-                    System.out.println("Wynik: " + gen.zwrocPalindrom(input));
-                    break;
-                }
-                default: {
-                    System.out.println("Nie rozumiem polecenia:)");
-                    break;
-                }
+                System.exit(0);
+
+            } else if (userChoice.equals("2")) {
+
+                System.out.println("Podaj wyraz do odwrócenia");
+                input = sc.nextLine();
+                System.out.println("Wynik: " + gen.makePalindrome(input));
 
             }
+
+            else
+            {
+                System.out.println("Nie rozumiem!");
+
+            }
+
+
         } while (true);
     }
 }

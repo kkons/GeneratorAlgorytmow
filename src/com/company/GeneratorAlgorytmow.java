@@ -4,19 +4,19 @@ public class GeneratorAlgorytmow {
 
 
 
-    public String zwrocPalindrom(String input){
+    public String makePalindrome(String input){
 
-        int dlugosc = input.length()-1; // dlugosc wyrazu do odwrocenia
-        StringBuffer output = new StringBuffer(); // wynik metody
+        int inputLength = input.length()-1;
+        StringBuilder output = new StringBuilder();
 
-        for (int i = dlugosc; i >= 0 ; i--) {
-            output.append(input.charAt(i)); //odwracanie
-        }
+        for (int i = inputLength; i >= 0 ; i--)
+            output.append(input.charAt(i));
+
         return output.toString();
     }
 
 
-    public void prezentujMenu(){
+    public void displayMenu(){
 
         System.out.println("Wybierz opcję programu:");
         System.out.println("1 - Wyjście");
